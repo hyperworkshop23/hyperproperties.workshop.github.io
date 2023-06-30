@@ -16,8 +16,8 @@
     <div class="w3-right w3-hide-small">
       <a href="#home" class="w3-bar-item w3-button">About</a>
       <a href="#speakers" class="w3-bar-item w3-button">Invited Speakers</a>
-      <a href="#program" class="w3-bar-item w3-button">Call for Presentations</a>
-      <a href="#dates" class="w3-bar-item w3-button">Dates</a>
+      <a href="#call" class="w3-bar-item w3-button">Call for Presentations</a>
+      <a href="#program" class="w3-bar-item w3-button">Program</a>
       <a href="#contact" class="w3-bar-item w3-button">Organization</a>
     </div>
   </div>
@@ -63,8 +63,8 @@
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <img src="aarti_gupta.jpg" alt="Gupta" style="width:100%">
-      <h3>Aarti Gupta</h3>
-      <p class="w3-opacity">Princeton, USA</p>
+      <h3>Aarti Gupta </h3>
+      <p class="w3-opacity">Princeton, USA <button onclick="toggleDiv('gupta-bio');" class="w3-btn"></button></p>
       <!-- <p><button onclick="toggleDiv('gupta-bio');" class="arrow down"></button></p> -->
       <p id="gupta-bio" style="display: none;">Aarti Gupta is a Professor in the Department of Computer Science at Princeton University. She received a PhD in Computer Science from Carnegie Mellon University. Her research interests are in the areas of formal verification of programs and systems, automatic decision procedures, and electronic design automation. She has served on the technical program committees of many leading conferences, and is currently serving on the Steering Committee of the Computer Aided Verification (CAV) Conference. She has received several Best Paper Awards from leading conferences and journals and has been recognized as an ACM Fellow.</p>
     </div>
@@ -93,7 +93,7 @@
   </div>
 
 
-  <div class="w3-container" id="program">
+  <div class="w3-container" id="call">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Call for Presentations</h3>
     <div>
       <p>
@@ -135,14 +135,127 @@
     
   </div>
 
-  <div class="w3-container" id="dates">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Important dates</h3>
+  <div class="w3-container" id="program">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Program</h3>
       <div>
-        <li> Submission deadline: May 15th 2023 (AOE)
-        </li>
-        <li> Notification: May 18th 2023
-        </li>
-      </div>  
+        <table>
+          <tr>
+            <th style="background-color: #dddddd;">8:50 Kick-off</th>
+          </tr>
+        </table>
+        <br>
+        <table>
+          <tr>
+            <th style="background-color: #dddddd;">9:00 Session 1</th>
+          </tr>
+          </table>
+          <table>
+          <tr>
+            <th>9:00 - 9:45 Invited talk</th>
+            <th>Bernd Finkbeiner</th>
+            <th>TBA </th>
+          </tr>
+          <tr>
+            <th>9:45 - 10:05 Contributed talk</th>
+            <th>Ana Oliveira Da Costa</th>
+            <th>Information-flow Interfaces </th>
+          </tr>
+          <tr>
+            <th>10:05 - 10:25 Contributed talk</th>
+            <th>Tzu-Han Hsu, Borzoo Bonakdarpour and Cesar Sanchez</th>
+            <th>HyperQB: A QBF-Based Bounded Model Checker for Hyperproperties</th>
+          </tr>
+        </table> 
+        <br>
+        <table>
+          <tr>
+            <th style="background-color: #dddddd;">10:30 Coffee/Tea break</th>
+          </tr>
+        </table>
+        <br>
+        <table>
+          <tr>
+            <th style="background-color: #dddddd;">11:00 Session 2</th>
+          </tr>
+          <table>
+          <tr>
+            <th>11:00 - 11:45 Invited talk</th>
+            <th>Aarti Gupta</th>
+            <th>TBA </th>
+          </tr>
+          <tr>
+            <th>11:45 - 12:30 Invited talk</th>
+            <th>Majid Zamani</th>
+            <th>Secure-by-Construction Synthesis of Cyber-Physical Systems </th>
+          </tr>
+        </table> 
+        <br>
+        <table>
+          <tr>
+            <th style="background-color: #dddddd;">12:30 Lunch</th>
+          </tr>
+        </table>
+        <br>
+        <table>
+          <tr>
+            <th style="background-color: #dddddd;">14:00 Session 3</th>
+          </tr>
+          </table>
+          <table>
+          <tr>
+            <th>14:00 - 14:45 Invited talk</th>
+            <th>Catuscia Palamidessi</th>
+            <th>TBA </th>
+          </tr>
+          <tr>
+            <th>14:45 - 15:05 Contributed talk</th>
+            <th>Norine Coenen, Bernd Finkbeiner, Hadar Frenkel, Christopher Hahn, Niklas Metzger and Julian Siber</th>
+            <th>Causality and Hyperproperties</th>
+          </tr>
+          <tr>
+            <th>15:05 - 15:25 Contributed talk</th>
+            <th>Inigo Incer</th>
+            <th>Hypercontracts</th>
+          </tr>
+        </table> 
+        <br>
+        <table>
+          <tr>
+            <th style="background-color: #dddddd;">15:30 Coffee/Tea break</th>
+          </tr>
+        </table>
+        <br>
+        <table>
+          <tr>
+            <th style="background-color: #dddddd;">16:00 Session 4</th>
+          </tr>
+          </table>
+          <table>
+          <tr>
+            <th>16:00 - 16:20 Contributed talk</th>
+            <th>Hadar Frenkel</th>
+            <th>Second-Order Hyperproperties </th>
+          </tr>
+          <tr>
+            <th>16:20 - 16:40 Contributed talk</th>
+            <th>Raven Beutner and Bernd Finkbeiner</th>
+            <th>Game-based Verification of Hyperliveness -- In Finite and Infinite Systems</th>
+          </tr>
+          <tr>
+            <th>16:40 - 17:00 Contributed talk</th>
+            <th>Yang Liu and Chris Yuhao Liu</th>
+            <th>A Technical Survey of Bias: Toward Disentangling Biases in Machine Learning</th>
+          </tr>
+        </table>
+        <br>
+        <table>
+          <tr>
+            <th style="background-color: #dddddd;">17:00 Panel</th>
+          </tr>
+        </table>
+        <br>
+
+      
   </div>
 
   <!-- Contact Section -->

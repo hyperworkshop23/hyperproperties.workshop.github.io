@@ -57,22 +57,22 @@
     <div class="w3-col l3 m6 w3-margin-bottom">
       <img src="bernd_finkbeiner.jpg" alt="Finkbeiner" style="width:100%">
       <h3>Bernd Finkbeiner</h3>
-      <p class="w3-opacity">CISPA, Germany</p>
-      <!-- <p><button onclick="toggleDiv('finkbeiner-bio');" class="arrow down"></button></p> -->
+      <p class="w3-opacity">CISPA, Germany </p>
+      <button onclick="toggleDiv('finkbeiner-bio');" class="arrow down"></button>
       <p id="finkbeiner-bio" style="display: none;">Bernd Finkbeiner is a faculty member at the CISPA Helmholtz Center for Information Security and a professor of computer science at Saarland University. He obtained his Ph.D. in 2003 from Stanford University. His research focus is the development of reliable guarantees for the safety and security of computer systems, including specification, program synthesis and repair, and static and dynamic verification. In 2015, he was awarded an ERC Consolidator Grant on synthesis algorithms for distributed systems; in 2022, an ERC Advanced Grant on logics and algorithms for hyperproperties.</p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <img src="aarti_gupta.jpg" alt="Gupta" style="width:100%">
       <h3>Aarti Gupta </h3>
       <p class="w3-opacity">Princeton, USA <button onclick="toggleDiv('gupta-bio');" class="w3-btn"></button></p>
-      <!-- <p><button onclick="toggleDiv('gupta-bio');" class="arrow down"></button></p> -->
+      <p><button onclick="toggleDiv('gupta-bio');" class="arrow down"></button></p>
       <p id="gupta-bio" style="display: none;">Aarti Gupta is a Professor in the Department of Computer Science at Princeton University. She received a PhD in Computer Science from Carnegie Mellon University. Her research interests are in the areas of formal verification of programs and systems, automatic decision procedures, and electronic design automation. She has served on the technical program committees of many leading conferences, and is currently serving on the Steering Committee of the Computer Aided Verification (CAV) Conference. She has received several Best Paper Awards from leading conferences and journals and has been recognized as an ACM Fellow.</p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <img src="catuscia_palamidessi.jpg" alt="Palamidessi" style="width:100%">
       <h3>Catuscia Palamidessi</h3>
       <p class="w3-opacity">INRIA, France</p>
-      <!-- <p><button onclick="toggleDiv('palamidessi-bio');" class="arrow down"></button></p> -->
+      <p><button onclick="toggleDiv('palamidessi-bio');" class="arrow down"></button></p>
       <p id="palamidessi-bio" style="display: none;">Catuscia Palamidessi is Director of Research at INRIA Saclay (since 2002), where she leads the team COMETE. She has been Full Professor at the University of Genova, Italy (1994-1997) and Penn State University, USA (1998-2002). Palamidessi's research interests include Privacy, Machine Learning, Fairness, Secure Information Flow, Formal Methods, and Concurrency. In 2019 she has obtained an ERC advanced grant to conduct research on Privacy and Machine Learning. In 2022, she received the Grand Prix of the French Academy of Science.  She has been PC chair of various conferences including LICS and ICALP, and PC member of more than 120 international conferences. She is in the Editorial board of several journals, including the IEEE Transactions in Dependable and Secure Computing, Mathematical Structures in Computer Science, Theoretics, the Journal of Logical and Algebraic Methods in Programming and Acta Informatica. She is serving in the Executive Committee of ACM SIGLOG, CONCUR, and CSL.</p>
       <!-- <p><button class="w3-button w3-light-grey w3-block">Contact</button></p> -->
     </div>
@@ -80,7 +80,7 @@
       <img src="majid_zamani.jpg" alt="Zamani" style="width:100%">
       <h3>Majid Zamani</h3>
       <p class="w3-opacity">CU Boulder, USA</p>
-      <!-- <p><button onclick="toggleDiv('zamani-bio');" class="arrow down"></button></p> -->
+      <p><button onclick="toggleDiv('zamani-bio');" class="arrow down"></button></p>
       <p id="zamani-bio" style="display: none;">
       	Dr. Majid Zamani is an Associate Professor in the Computer Science Department at the University of Colorado Boulder. Previously, he held the position of Assistant Professor in the Department of Electrical Engineering at Technical University of Munich from May 2014 to January 2019. During this time, he led the Hybrid Control Systems Group. 
  
@@ -153,17 +153,53 @@
           <tr>
             <th width=250px>09:00 - 09:45 Invited talk</th>
             <th width=400px>Bernd Finkbeiner</th>
-            <th>Hyperproperties and the Challenge of Compositional Synthesis</th>
+            <th><button onclick="toggleDiv('finkbeiner-abst');">Hyperproperties and the Challenge of Compositional Synthesis</button></th>
+          </tr>
+          <tr id="finkbeiner-abst" style="display: none;">
+           
+            <th colspan="3" style="font-weight: normal">
+              The distributed synthesis problem is to translate a logical specification of a distributed system into an implementation that is guaranteed to satisfy the specification. What makes the synthesis of distributed systems more interesting, but also far more challenging than standard reactive synthesis, is that each component only has partial knowledge of the global system state. Currently, there are no scalable algorithms for distributed synthesis. The grand challenge is to devise a compositional synthesis method, i.e., a method that constructs one component at a time. The fundamental difficulty is that the components often need to act upon information that is available only in another component. However, we do not know how that component encodes the information before we know its implementation; seemingly, it is impossible to build one component without knowing the implementation of the other.
+
+              In this talk, I will present the building blocks of a compositional synthesis method based on the key idea of characterizing the necessary flow of information between the components as a hyperproperty. We introduce information flow assumptions, which are requirements that are necessary in order to realize a particular component. By formulating these assumptions as hyperproperties, we avoid referring to any particular encoding of the information. We develop methods that automatically derive information flow assumptions from the specification, and a technique for the automatic synthesis of component implementations based on information flow assumptions. Together, these methods provide a compositional approach to the synthesis of distributed systems. The talk is based on joint work with Niklas Metzger and Yoram Moses.
+            </th>
           </tr>
           <tr>
             <th width=250px>09:45 - 10:05 Contributed talk</th>
             <th width=400px>Ana Oliveira Da Costa</th>
-            <th>Information-flow Interfaces </th>
+            <th> <button onclick="toggleDiv('costa-abst');"> Information-flow Interfaces </button></th>
+          </tr>
+          <tr id="costa-abst" style="display: none;">
+           
+            <th colspan="3" style="font-weight: normal">
+              Contract-based design is a promising methodology for taming the complexity of developing sophisticated systems. 
+A formal contract distinguishes between assumptions, which are constraints that the designer puts on components' environments, and guarantees, which are promises that the designer asks from the team that implements a component. 
+A theory of formal contracts can be formalized as an interface theory, supporting the incremental design of systems and their independent implementatbility by defining an appropriate refinement relation and interface's composition. 
+
+
+Security policies are usually enforced by restricting the flow of information in a system. 
+Security attacks tailored for information-flow leakage often rely on analyzing and comparing multiple observations of a system to deduce protected information. 
+From a formal-language perspective, such security vulnerabilities are not characterized by properties of a single system execution but rather by properties of sets of execution traces, called hyperproperties. 
+
+Although there is a rich landscape of contract-based design methods addressing functional and extra-functional properties, we are the first to present a contract-based design approach for the structural aspect of information-flow policies. 
+In particular, we support the design of high-level requirements in terms of no-flow predicates. 
+We develop our theory for both stateless and stateful interfaces. Additionally, we introduce information-flow contracts where assumptions and guarantees are sets of flow relations, drawing inspiration from the classical notion of security lattice. 
+We use these contracts to illustrate how to enrich information-flow interfaces with a semantic view. 
+Finally, we motivate the applicability of our framework with examples inspired by the automotive domain. 
+
+In this talk, I will present information-flow interfaces focusing on their semantic interpretation. 
+The main goals of this presentation are to start a discussion on how to extend this framework with different semantics and, more generally, on how to work towards a theory that supports a security-by-design approach to systems' implementation. 
+            </th>
           </tr>
           <tr>
             <th width=250px>10:05 - 10:25 Contributed talk</th>
             <th width=400px>Tzu-Han Hsu, Borzoo Bonakdarpour and Cesar Sanchez</th>
-            <th>HyperQB: A QBF-Based Bounded Model Checker for Hyperproperties</th>
+            <th> <button onclick="toggleDiv('hsu-abst');"> HyperQB: A QBF-Based Bounded Model Checker for Hyperproperties </button></th>
+          </tr>
+          <tr id="hsu-abst" style="display: none;">
+           
+            <th colspan="3" style="font-weight: normal">
+              This talk presents HyperQB, a push-button QBF-based bounded model checker for hyperproperties. Hyperproperties are properties of systems that relate multiple computation traces, including many important information-flow security and concurrency properties. HyperQB takes as input a NuSMV model and a formula expressed in the temporal logic HyperLTL. Unlike the existing similar tools, our QBF-based technique allows HyperQB to seamlessly deal with arbitrary quantifier alternations. The user can choose between two modes: bug-hunt (with negated formula), or find witness (with non-negated formula). We report on successful and effective model checking for a rich set of experiments on a variety of case studies, including previously investigated cases such as information-flow security, concurrent data structures, robotic planning, etc., and new cases such as co-termination, deniability, and three variations of non-interference (intransitive, termination sensitive/insensitive).
+            </th>
           </tr>
         </table> 
         <br>
@@ -181,13 +217,29 @@
           <tr>
             <th width=250px>11:00 - 11:45 Invited talk</th>
             <th width=400px>Aarti Gupta</th>
-            <th>Secure information flow: Lazy self-decomposition and Modular verification</th>
+            <th> <button onclick="toggleDiv('gupta-abst');"> Secure information flow: Lazy self-decomposition and Modular verification </button></th>
+          </tr>
+          <tr id="gupta-abst" style="display: none;">
+           
+            <th colspan="3" style="font-weight: normal">
+                Verification of secure information flow has received a lot of attention, with a wide range of techniques from type-driven analysis to software model checking. In this talk, I will describe two symbolic approaches that focus on improving the performance and modularity of the well-known approach based on self-decomposition. The first performs a lazy self-decomposition, where symbolic taint analysis is used for sound verification along with counterexample guided self-decomposition to achieve improved precision. The second focuses on modular self-decomposition, where function summaries and customized grammars are used to automatically generate relational invariants at function boundaries. 
+
+                This talk describes joint work with Grigory Fedyukovich, Lauren Pick, Sharad Malik, Pramod Subramanyan, Yakir Vizel, and Weikun Yang.
+
+            </th>
           </tr>
           <tr>
             <th width=250px>11:45 - 12:30 Invited talk</th>
             <th width=400px>Majid Zamani</th>
-            <th>Secure-by-Construction Synthesis of Cyber-Physical Systems </th>
+            <th> <button onclick="toggleDiv('zamani-abst');"> Secure-by-Construction Synthesis of Cyber-Physical Systems </button></th>
           </tr>
+          <tr id="zamani-abst" style="display: none;">
+           
+            <th colspan="3" style="font-weight: normal">
+              Correct-by-construction synthesis stands as a pivotal approach at the intersection of formal methods and control theory, particularly in the realm of designing safety-critical systems. Rather than relying on the traditional, yet arduous (re)design-verify-validate loop, the correct-by-construction methodology advocates for the continuous refinement of formal requirements, connected by chains of formal proofs. This approach enables the construction of systems that embody correctness by design. Notably, significant advancements have been made in expanding the scope of correct-by-construction synthesis, with a specific focus on cyber-physical systems that integrate discrete-event control with the continuous environment. This expansion has been achieved through the amalgamation of symbolic techniques with principled state-space reduction methods, thereby broadening the applicability of correct-by-construction synthesis to control systems. 
+ 
+              However, the landscape changes when it comes to security-critical control systems, as security properties are often verified retrospectively, undermining the essence of the correct-by-construction paradigm. We argue that to truly fulfill the vision of correct-by-construction synthesis for security-critical systems, security considerations must assume a central role alongside safety considerations. Furthermore, propelled by recent progress in the realm of opacity sub-classes of security properties and the concept of hyperproperties, which can unify security and safety properties, we believe that the time is ripe for the research community to collectively address the challenge of secure-by-construction synthesis in a holistic manner. This talk aims to articulate our vision by highlighting the recent strides we have made, which serve as building blocks for establishing a solid foundation for the secure-by-construction synthesis of cyber-physical systems. 
+            </th>
         </table> 
         <br>
         <table>
@@ -207,16 +259,39 @@
             <th width=350px>Catuscia Palamidessi</th>
             <th>TBA </th>
           </tr>
+          <tr id="palamidessi-abst" style="display: none;">
+           
+            <th colspan="3" style="font-weight: normal">
+              
+            </th>
           <tr>
             <th width=250px>14:45 - 15:05 Contributed talk</th>
             <th width=400px>Norine Coenen, Bernd Finkbeiner, Hadar Frenkel, Christopher Hahn, Niklas Metzger and Julian Siber</th>
-            <th>Causality and Hyperproperties</th>
+            <th> <button onclick="toggleDiv('coenen-abst');"> Causality and Hyperproperties </button></th>
           </tr>
+          <tr id="coenen-abst" style="display: none;">
+           
+            <th colspan="3" style="font-weight: normal">
+              We summarize recent work on formalizing counterfactual causality using hyperproperties. The intrinsic comparison of the actual world and a hypothetical counterfactual world can be captured by a hyperproperty that, in the context of a computing system, relates multiple executions to each other. In this extended abstract, we present two novel causality definitions in the context of reactive systems with an emphasis on the connections of causality and hyperproperties. This extended abstract builds on our papers at CAV'22 and ATVA'22.
+            </th>
           <tr>
             <th width=250px>15:05 - 15:25 Contributed talk</th>
             <th width=400px>Inigo Incer</th>
-            <th>Hypercontracts</th>
+            <th><button onclick="toggleDiv('inigo-abst');"> Hypercontracts </button></th>
           </tr>
+          <tr id="inigo-abst" style="display: none;">
+           
+            <th colspan="3" style="font-weight: normal">
+              Contract theories have been proposed to formally support 
+distributed and decentralized system design while ensuring safe system 
+integration. We propose hypercontracts, a general model with a richer 
+structure for its underlying model of components, subsuming simulation
+preorders. While general, the new model provides a richer algebra for 
+its notions of refinement, parallel composition, and quotient. Further, 
+it allows the introduction of new operations. Building on top of these 
+foundations, we propose conic hypercontracts, which are still general but
+come with a finite description.
+            </th>
         </table> 
         <br>
         <table>
@@ -234,18 +309,33 @@
           <tr>
             <th width=250px>16:00 - 16:20 Contributed talk</th>
             <th width=400px>Hadar Frenkel</th>
-            <th>Why Do We Need Second-Order Hyperlogics?</th>
+            <th><button onclick="toggleDiv('frenkel-abst');">Why Do We Need Second-Order Hyperlogics?</button></th>
           </tr>
+          <tr id="frenkel-abst" style="display: none;">
+           
+            <th colspan="3" style="font-weight: normal">
+              We present Hyper<sup>2</sup>LTL, a temporal logic for the specification of hyperproperties that allows for second-order quantification over sets of traces. We focus on the motivation for introducing second-order quantification, illustrating it by examining properties from three different domains, all expressible in Hyper<sup>2</sup>LTL:  complex epistemic properties like common knowledge; asynchronous Hyperproperties; and Mazurkiewicz trace theory. We show that the first-order quantification over traces (e.g., of HyperLTL) is not enough to express such properties, yielding the need for a second-order quantification. The model-checking problem of Hyper<sup>2</sup>LTL is generally undecidable. We present a fixpoint fragment of Hyper<sup>2</sup>LTL that still captures the properties above and, thanks to its more constructive nature, allows us to develop approximate model-checking algorithms. 
+            </th>
           <tr>
             <th width=250px>16:20 - 16:40 Contributed talk</th>
             <th width=400px>Raven Beutner and Bernd Finkbeiner</th>
-            <th>Game-based Verification of Hyperliveness -- In Finite and Infinite Systems</th>
+            <th><button onclick="toggleDiv('beutner-abst');">Game-based Verification of Hyperliveness -- In Finite and Infinite Systems</button></th>
           </tr>
+          <tr id="beutner-abst" style="display: none;">
+           
+            <th colspan="3" style="font-weight: normal">
+              
+            </th>
           <tr>
             <th width=250px>16:40 - 17:00 Contributed talk</th>
             <th width=400px>Yang Liu and Chris Yuhao Liu</th>
-            <th>A Technical Survey of Bias: Toward Disentangling Biases in Machine Learning</th>
+            <th><button onclick="toggleDiv('liu-abst');">A Technical Survey of Bias: Toward Disentangling Biases in Machine Learning</button></th>
           </tr>
+          <tr id="liu-abst" style="display: none;">
+           
+            <th colspan="3" style="font-weight: normal">
+              The increased utilization of machine learning in critical societal applications has raised concerns about potential instances of biased algorithmic treatment. In addition to the immediate harm caused by unfairness, biased treatment can have long-term repercussions, especially in applications where future opportunities are dependent on present predictions and decisions. Despite the extensive literature on biases, we have observed an overload of the term, often lacking clear definitions and differentiation from other related concepts. Our aim is to examine the most prominent definitions. Our objective is to enhance the understanding of the underlying causes behind observed data and machine biases.
+            </th>
         </table>
         <br>
         <table>
@@ -303,7 +393,7 @@
 <script type="text/javascript">
   function toggleDiv(id) {
       var div = document.getElementById(id);
-      div.style.display = div.style.display == "none" ? "block" : "none";
+      div.style.display = div.style.display == "none" ? "table-row" : "none";
 }
 </script>
 

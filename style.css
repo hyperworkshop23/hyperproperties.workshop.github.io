@@ -247,9 +247,22 @@ td, th {
   padding: 8px;
 }
 
-/*tr:nth-child(even) {
-  background-color: #dddddd;
-}*/
+th button {
+background-color: white; /* Green */
+  border: none;
+  color: black;
+  /*padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;*/
+  display: inline-block;
+  /*font-size: 16px;*/
+}
+
+th button:hover{
+	color: orange;
+}
+
+
 
 .arrow {
   border: solid black;

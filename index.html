@@ -324,7 +324,11 @@ come with a finite description.
           <tr id="beutner-abst" style="display: none;">
            
             <th colspan="3" style="font-weight: normal">
-              
+              Most existing work has focussed on verifying k-safety properties, i.e., hyperproperties that reason universally about all k-tuples of traces in a system. 
+In this talk, we study the verification of richer properties that combine universal and existential quantification over traces. 
+Concretely, we consider \forall^k\eixsts^l properties, which state that for all k executions, there exist l executions that, together, satisfy some property. 
+Such properties allow for the specification of many non-k-safety properties, including hyperliveness properties such as generalized non-interference, refinement, and robustness. 
+We present an approach to verify such property using a game-based semantics of existential quantification, discuss the completeness of the game-based approach, and sketch extensions for verifying infinite-state systems. 
             </th>
           <tr>
             <th width=250px>16:40 - 17:00 Contributed talk</th>
